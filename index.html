@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src=”https://code.jquery.com/jquery-3.2.1.min.js”></script>
+<script src=”https://cdn.steemjs.com/lib/latest/steem.min.js”></script>
+<script>
+
+
+function post(){
+
+var wif =””;
+var parentAuthor=””;
+var parentPermlink=”test”;
+var author=”izzetemredemir”;
+var permlink =”test-video”;
+var title=” Test Video “;
+var body=”Bu bir test içeriğidir.”;
+
+steem.broadcast.comment(wif, parentAuthor, parentPermlink, author, permlink, title, body, { tags:[‘tr’, ‘video’] , image:[‘https://steemitimages.com/640×480/https://www.genesis-mining.com/files/960×640/GM_LS-BIT-Banners_960x640px.jpeg’] , app: ‘tester’}, function(err, result) {
+console.log(err, result);
+});
+
+}
+post();
+
+</script>
+</head>
+<body>
+</body>
+</html>
